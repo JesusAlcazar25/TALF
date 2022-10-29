@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+    \title{\textbf{Práctica 1 TALF}}
+    \author{Jesús Alcázar Pérez 2ºA Ingeniería Informática}
+    \date{}
+    
+    \addtolength{\topmargin}{-3,5cm}
+    \addtolength{\textheight}{4cm}
+    %\usepackage[spanish]{babel}
+    \usepackage[a4paper, margin=2cm, top=5mm, bottom=15mm]{geometry}
+    
+    % Paquetes necesarios
+	\usepackage[utf8]{inputenc}
+	\usepackage{amsthm, amsmath}
+	\usepackage{nccmath} %Para centrar ecuaciones
+	\usepackage{graphicx}
+	\usepackage{enumitem}
+
+\begin{document}
+
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Find the power set $R^3$ of $R$ = \{(1, 1),(1, 2),(2, 3),(3, 4)\}. Check your answer with the script powerrelation.m and write a \LaTeX\ document with the solution step by step.}
+
+Siendo $R$ = \{(1, 1), (1, 2), (2, 3), (3, 4)\} \\
+$R^2$ = $R$ × $R$ = \{(1, 1),(1, 2),(2, 3),(3, 4)\} × \{(1, 1),(1, 2),(2, 3),(3, 4)\} = \\
+\{(1, 1),(1, 2),(1, 3),(2, 4)\} \\
+$R^3$ = $R$ × $R^2$ = \{(1, 1),(1, 2),(2, 3),(3, 4)\} × \{(1, 1),(1, 2),(1, 3),(2, 4)\} = \\
+\{(1, 1),(1, 2),(1, 3),(1, 4)\} \\
+Por tanto, $R^3$ = \{(1, 1), (1, 2), (2, 3), (1, 4)\}
+\\
+\\
+Comprobación en Octave: \\
+octave:1 powerrelation({['1', '1'], ['1', '2'], ['2', '3'], ['3', '4']}, 3)\\
+ans = \{ [1,1] = 11, [1,2] = 12, [1,3] = 13, [1,4] = 14 \}
+
+\end{document}
+
