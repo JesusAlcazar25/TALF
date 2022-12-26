@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+    \title{\textbf{Práctica 4 TALF}}
+    \author{Jesús Alcázar Pérez 2ºA Ingeniería Informática}
+    \date{\today}
+    
+    \addtolength{\topmargin}{-4cm}
+    \addtolength{\textheight}{4cm}
+    %\usepackage[spanish]{babel}
+    \usepackage[a4paper, margin=3cm, top=5mm, bottom=15mm]{geometry}
+    \usepackage{graphicx}
+    \usepackage{tikz}
+    %\usepackage{whilecode2}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{plain}
+\setlength{\parskip}{6pt}
+
+\section{Calculate the lower codification for the WHILE program "Diverge"}
+
+As a diverge program, you only need to enter a loop without making it possible to skip, and then it is neccesary to do it with the simplest options available, as you want to get the least codification number. An example of that program is:
+
+\begin{verbatim}
+Diverge = (0, s)
+s:	
+   x2:= x1+1; 
+   while x2!= 0 do 
+     	X1:= 0 
+   od
+\end{verbatim}
+To procced with the codification we will use octave scripts. That give us:
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=1.00]{entrega/CapturaEjecucion_CODE2N_diverger.png}
+\caption{Codification using CODE2N in Octave}
+\label{}
+\end{figure}
+
+\section{Octave script that prints all the vectors and an example of execution}
+\begin{center}
+Function that represents all the WHILE programs for an index N in Octave.
+\begin{verbatim}
+function printNvectors(N)
+for i=0:N-1
+disp(['(' num2str(godeldecoding(i)) ')'])
+end
+end
+\end{verbatim}
+\end{center}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.50]{entrega/CapturaEjecucion_printNvectors.png}
+\caption{Example of execution in Octave}
+\label{}
+\end{figure}
+
+
+\newpage
+\section{Octave script that prints all the WHILE programs and an example of execution}
+\centering
+Function that represents all the WHILE programs for an index N in Octave.
+\begin{verbatim}
+function printNwhilePrograms(N)
+for i=0:N-1
+disp(N2WHILE(i))
+end
+end
+\end{verbatim}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=1.00]{entrega/CapturaEjecucion_printNwhilePrograms.png}
+\caption{Example of execution in Octave}
+\label{}
+\end{figure}
+
+
+\end{document}
