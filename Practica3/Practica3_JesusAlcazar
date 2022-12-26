@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}    
+    
+ 	%\usepackage[spanish,activeacute]{babel}
+ 	\usepackage{amsfonts}
+ 	\usepackage{graphicx}
+ 	\usepackage{whilecode2}
+
+	\title{Práctica 3 TALF}
+    \author{Jesús Alcázar Pérez 2ºA Ingeniería Informática}
+    \date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{plain}
+
+\section{Turing Machine example done with JFLAP}
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.50]{Entrega/Ejercicio3.4_MT.jpg}
+\caption{TM that sums 2 values}
+\end{figure}
+
+\section{Requested Recursive function and an Octave capture}
+\centering
+addition\_3 = $<<\pi^1_1|\sigma(\pi^3_3)>| \sigma(\pi^4_4)>$ 
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.40]{Entrega/CapturaAddition3Rec.png}
+\caption{Addition3 in Octave execution}
+\label{}
+\end{figure}
+
+\section{WHILE program that computes the sum of 3 values}
+\centering
+
+\begin{whilecode}[H]
+
+\ Q=(3,4,s)
+\\ s:
+
+ \While{$X_1 \not = 0$}{
+
+  $X_2 \Assig X_2 + 1$\;
+  $X_1 \Assig X_1 - 1$
+
+ }
+ $X_4 \Assig X_2$
+ 
+  \While{$X_2 \not = 0$}{
+
+  $X_3 \Assig X_3 + 1$\;
+  $X_2 \Assig X_2 - 1$
+
+ }
+ $X_1 \Assig X_3$
+ 
+ \end{whilecode}
+
+\end{document}
