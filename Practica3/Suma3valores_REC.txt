@@ -1,0 +1,2 @@
+Suma de 3 valores recursiva
+<<π^1_1|σ(π^3_3)>|σ(π^4_4)>
